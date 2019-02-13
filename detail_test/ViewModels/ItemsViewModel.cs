@@ -46,11 +46,18 @@ namespace detail_test.ViewModels
                 Itemsa.Clear();
                 Itemsl.Clear();
                 int i = 0;
+                int cutoff = 0;
                 var items = await DataStore.GetItemsAsync(true);
+                if (LoginViewModel.SubscriptionLevel == 127)//paid user
+                {
+                     cutoff = LoginViewModel.ProgressPoint;
+                }
+
                 foreach (var item in items)
                 {
                     Items.Add(item);
-                    if (i<= MainPage.Prog)// new
+
+                    if (i <= cutoff)
                     {
                         Itemsa.Add(item);
                     }
@@ -58,7 +65,7 @@ namespace detail_test.ViewModels
                     {
                         Itemsl.Add(item);
                     }
-                    i++;// new end
+                    i++;
                 }
             }
             catch (Exception ex)

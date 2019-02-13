@@ -35,10 +35,11 @@ namespace detail_test.Views
 
         public void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (lm.SubmitInfo(out int subLevel, out int progress, out string ServerCon))
-            {
-                var MainPage = (new MainPage(subLevel,progress, ServerCon));
-
+            //if (lm.SubmitInfo(out int subLevel, out int progress, out string ServerCon))
+                if (lm.SubmitInfo())
+                {
+                //var MainPage = (new MainPage(subLevel,progress, ServerCon));
+                var MainPage = (new MainPage());
                 Application.Current.MainPage = MainPage;
                 //await Navigation.PushModalAsync(MainPage);
             }

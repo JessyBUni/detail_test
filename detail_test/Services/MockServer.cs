@@ -38,8 +38,16 @@ namespace detail_test.Services
 
                 User person = new User("test@gmail.com", "test", false);
                 registeredUsers.Add(person);
-                person = new User("test", "1", false);
+
+                person = new User("test", "1", false,127);
                 registeredUsers.Add(person);
+
+                person = new User("b", "2", false,127,2);
+                registeredUsers.Add(person);
+
+                person = new User("c", "3", false, 127, 3);
+                registeredUsers.Add(person);
+
                 CreateServer(registeredUsers, out bool err, out string ServerCon);
                 ServerConn = ServerCon;
             }
@@ -71,6 +79,7 @@ namespace detail_test.Services
             registeredUsers.Add(newfield);
             formatter.Serialize(stream, registeredUsers);
             stream.Close();
+
         }
         public void updateUserProgress(string ServerCon,string user, int prog)
         {

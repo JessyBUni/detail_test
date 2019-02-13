@@ -10,6 +10,12 @@ namespace detail_test.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
+        public static string ServerConnection;
+        public static string Username;
+        public static string Code;
+        public static int SubscriptionLevel;
+        public static int ProgressPoint;
+
         public Action DisplayInvalidLoginPrompt;
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string email;
@@ -33,34 +39,39 @@ namespace detail_test.ViewModels
             }
         }
         public ICommand SubmitCommand { protected set; get; }
-        public bool SubmitInfo (out int subLevel, out int progress,out string ServerCon)
+        public bool SubmitInfo()
         { 
             if (email==null || password == null)
             {
                 //turn on for deploy
                 DisplayInvalidLoginPrompt();
-                subLevel = 0;
-                progress = 0;
-                ServerCon = "";             
+                ServerConnection = "";
+                Username = email;
+                Code = password;
+                SubscriptionLevel = 0;
+                ProgressPoint = 0;
+            
                 return false;
-                //subLevel = 1;
-                //progress = 3;
-                //return true; // turn off for deploy
             }
             MockServer mockServer = new MockServer("",out string ServerConn);
             bool b= mockServer.checkServer(ServerConn,email, password,true, out int sub, out int prog);
             if (b)
             {
-                subLevel = sub;
-                progress = prog;
-                ServerCon = ServerConn;
+                ServerConnection = ServerConn;
+                Username= email;
+                Code=password;
+                SubscriptionLevel=sub;
+                ProgressPoint=prog;
                 return true;
             }
             else
             {
-                subLevel = 0;
-                progress = 0;
-                ServerCon = ServerConn;
+                DisplayInvalidLoginPrompt();
+                ServerConnection = ServerConn;
+                Username = email;
+                Code = password;
+                SubscriptionLevel = 0;
+                ProgressPoint = 0;
                 return false;
             }
 

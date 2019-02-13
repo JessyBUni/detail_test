@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using detail_test.Models;
 using detail_test.Views;
 using detail_test.ViewModels;
+using detail_test.Services;
 
 namespace detail_test.Views
 {
@@ -31,8 +32,20 @@ namespace detail_test.Views
             var item = args.SelectedItem as Item;
             if (item == null)
                 return;
-            //if (item.ID > progress) { return; }
-            //if (subscription == 1 && item.ID != 1) { return; }
+
+                if (item.ID == LoginViewModel.ProgressPoint)
+                {
+                if (LoginViewModel.SubscriptionLevel == 127)// user is paid
+                {
+                    MockServer m = new MockServer(LoginViewModel.ServerConnection, out string SerCon);
+                    int newprog = item.ID + 1;
+                    m.updateUserProgress(SerCon, LoginViewModel.Username, newprog);
+                    LoginViewModel.ProgressPoint = newprog;
+                    BindingContext = viewModel = new ItemsViewModel();
+                }
+            }
+            
+            //if (subscription == 1 && item.ID != 1) { return; }*/
 
             await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 

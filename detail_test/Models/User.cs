@@ -7,16 +7,13 @@ namespace detail_test.Services
         public string Username;
         public string password;
         public bool activateToken;
+        // valid subscription =127; // normal user==1;
         public int Subscription;
         public int progress;
 
-        public User()
-        {
-
-        }
+        public User(){ }
         public User(string name, string pass)
         {
-
             this.Username = name;
             this.password = pass;
             this.activateToken = false;
@@ -25,7 +22,6 @@ namespace detail_test.Services
         }
         public User( string name, string pass, bool b)
         {
-           
             this.Username = name;
             this.password = pass;
             this.activateToken = b;
@@ -34,12 +30,19 @@ namespace detail_test.Services
         }
         public User(string name, string pass, bool b,int s)
         {
-           
-            this.Username = name;
+        this.Username = name;
             this.password = pass;
             this.activateToken = b;
             this.Subscription = s;
             this.progress = 1;
+        }
+        public User(string name, string pass, bool b, int s, int p)
+        {
+            this.Username = name;
+            this.password = pass;
+            this.activateToken = b;
+            this.Subscription = s;
+            this.progress = p;
         }
         public void updateProgress(int prog)
         {

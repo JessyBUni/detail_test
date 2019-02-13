@@ -7,20 +7,13 @@ using Xamarin.Forms.Xaml;
 
 namespace detail_test.Views
 {
-  
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
-        static public int Prog;
-        static public int Sub;
-        static public string SC;
 
-        public MainPage( int Progress, int subLevel, string ServerCon)
+        //public MainPage( int Progress, int subLevel, string ServerCon)
+        public MainPage()
         {
-            Prog=Progress;
-            Sub = subLevel;
-            SC = ServerCon;
-
             InitializeComponent();
             //Application.Current.MainPage = this;
             MasterBehavior = MasterBehavior.Popover;

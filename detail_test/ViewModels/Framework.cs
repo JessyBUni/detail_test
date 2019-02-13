@@ -5,26 +5,22 @@ namespace detail_test.ViewModels
 {
     static class Framework
     {
-        public static readonly Thickness PagePadding;
+        public static readonly String PagePadding ="10";
+        public static readonly int TitleSize =22;
+        public static readonly Color TitleColour = Xamarin.Forms.Color.FromRgb(148, 59, 19);
+        public static readonly String TitleStyle = "Bold";
 
-        public struct TitleFont
-        {
-            public static readonly String size ="22";
-            public static readonly Color colour= Xamarin.Forms.Color.FromRgb(148, 59, 19);
-            public static readonly String style = "Bold";
-        };
-        public static readonly TitleFont Title;
 
         public struct HeaderFont
         {
-            public static readonly String size = "Medium";
+            public static readonly String size = "16";
             public static readonly Color colour = Xamarin.Forms.Color.FromRgb(224, 76, 6);
         };
         public static readonly HeaderFont Header;
 
         public struct TextFont
         {
-            public static readonly String size = "Small";
+            public static readonly String size = "10";
             public static readonly Color colour = Xamarin.Forms.Color.FromRgb(51, 10, 130);
         };
         public static readonly TextFont Text;
