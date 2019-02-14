@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}|Default">
   <MonoDevelop.Ide.ItemProperties.detail__test.UITests FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="detail_test/Views/ItemsPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="detail_test/Views/PasswordPage.xaml.cs">
     <Files>
       <File FileName="detail_test/ViewModels/Framework.cs" Line="4" Column="33" />
-      <File FileName="detail_test/Views/ItemsPage.xaml.cs" Line="40" Column="67" />
-      <File FileName="detail_test/ViewModels/ItemsViewModel.cs" Line="26" Column="89" />
-      <File FileName="detail_test/ViewModels/LoginViewModel.cs" Line="41" Column="62" />
-      <File FileName="detail_test/Views/PasswordPage.xaml.cs" Line="40" Column="18" />
-      <File FileName="detail_test/Views/MainPage.xaml.cs" Line="9" Column="2" />
-      <File FileName="detail_test/Services/MockServer.cs" Line="26" Column="21" />
-      <File FileName="detail_test/Models/User.cs" Line="48" Column="10" />
+      <File FileName="detail_test/Views/ItemsPage.xaml.cs" Line="39" Column="18" />
+      <File FileName="detail_test/ViewModels/ItemsViewModel.cs" Line="68" Column="25" />
+      <File FileName="detail_test/ViewModels/BaseViewModel.cs" Line="1" Column="1" />
+      <File FileName="detail_test/Views/PasswordPage.xaml" Line="93" Column="19" />
+      <File FileName="detail_test/Views/PasswordPage.xaml.cs" Line="44" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.detail__test.iOS automaticSigning="False" />

@@ -41,6 +41,7 @@ namespace detail_test.Views
                 //var MainPage = (new MainPage(subLevel,progress, ServerCon));
                 var MainPage = (new MainPage());
                 Application.Current.MainPage = MainPage;
+                //var MainPage = (new MainPage());
                 //await Navigation.PushModalAsync(MainPage);
             }
 
