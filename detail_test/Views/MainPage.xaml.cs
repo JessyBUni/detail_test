@@ -12,6 +12,7 @@ namespace detail_test.Views
     {
 
         //public MainPage( int Progress, int subLevel, string ServerCon)
+
         public MainPage()
         {
             InitializeComponent();

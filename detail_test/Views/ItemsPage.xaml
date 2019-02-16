@@ -13,24 +13,19 @@
               ColumnSpacing="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
-                <RowDefinition Height="30"/>
-                 <RowDefinition Height="auto"/>
-                 <RowDefinition Height="auto"/>
-                 <RowDefinition Height="30"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-        <Label  Text="Available Content"
-                FontSize="20"
-                Grid.Row="1"
-                Grid.Column="1"/>
         <ListView x:Name="AcessItemsListView"
-                  ItemsSource="{Binding Itemsa}" 
+                  IsGroupingEnabled="true" 
+                  GroupDisplayBinding="{Binding Header}"
+                  GroupShortNameBinding="{Binding Header}"
+                  ItemsSource="{Binding GroupedData}" 
                   VerticalOptions="FillAndExpand"
                   HasUnevenRows="true" 
                   RefreshCommand="{Binding LoadItemsCommand}" 
@@ -38,48 +33,34 @@
                   IsRefreshing="{Binding IsBusy, Mode=OneWay}" 
                   CachingStrategy="RecycleElement" 
                   ItemSelected="OnItemSelected"
-                  MinimumHeightRequest="150"
-                  Grid.Row="2"
+                  Grid.Row="1"
                   Grid.Column="1">
-            <ListView.ItemTemplate>
+                  <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Header}" 
+                                   FontSize="20" 
+                                   TextColor="{x:Static local:Framework.PrimaryColour}" 
+                                   VerticalOptions="CenterAndExpand" 
+                                   HorizontalOptions="StartAndExpand" />
+                           </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+               <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                            
                             <Label 
-                                  Text="{Binding Text}" 
+                                Text="{Binding Text}" 
                                 HeightRequest="40"
                                    LineBreakMode="NoWrap" 
                                    Style="{DynamicResource ListItemTextStyle}" 
                                    FontSize="16" 
-                                 TextColor="{x:Static local:Framework.PrimaryColour}"/>
+                                 TextColor="{Binding Colour}"
+                            />
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-         <Label  Text="Locked Content"
-                FontSize="20"
-                    Grid.Row="4"
-                 Grid.Column="1"/>
-        <ListView x:Name="LockItemsListView"
-                  ItemsSource="{Binding Itemsl}" 
-                  VerticalOptions="FillAndExpand" 
-                  HasUnevenRows="true" 
-                  MinimumHeightRequest="80"
-                  Grid.Row="5"
-                  Grid.Column="1">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                            <Label Text="{Binding Text}" 
-                                   LineBreakMode="NoWrap" 
-                                   HeightRequest="40"
-                                   Style="{DynamicResource ListItemTextStyle}" 
-                                   FontSize="16" 
-                                 TextColor="{x:Static local:Framework.SecondaryColour}"/>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView> 
     </Grid>
         </ContentPage.Content>
 </ContentPage>
