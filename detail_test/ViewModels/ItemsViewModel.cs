@@ -13,15 +13,12 @@ namespace detail_test.ViewModels
     public class Grouping : ObservableCollection<Item>
     {
         public string Header { get; set; }
-        public Color Colour { get; set; }
+        public string Colour { get; set; }
     }
     public class ItemsViewModel : BaseViewModel
     {
         public ObservableCollection<Grouping> GroupedData { get; set; }
         public ObservableCollection<Item> Items { get; set; }
-        //public ObservableCollection<Item> Itemsa { get; set; }
-        //public ObservableCollection<Item> Itemsl { get; set; }
-
         public Command LoadItemsCommand { get; set; }
 
 
@@ -29,8 +26,6 @@ namespace detail_test.ViewModels
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();
-            //Itemsa = new ObservableCollection<Item>();
-            //Itemsl = new ObservableCollection<Item>();
             GroupedData = new ObservableCollection<Grouping>();
 
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
@@ -53,15 +48,15 @@ namespace detail_test.ViewModels
             try
             {
                 Items.Clear();
-                //Itemsa.Clear();
-                //Itemsl.Clear();
                 GroupedData.Clear();
+
                 Grouping groupa = new Grouping();
                 groupa.Header = "Accessible Content";
-                groupa.Colour = Framework.PrimaryColour;
+                groupa.Colour = "local:Framework.SecondaryColour";
+
                 Grouping group = new Grouping();
                 group.Header = "Locked Content";
-                group.Colour = Framework.SecondaryColour;
+                group.Colour = "local:Framework.Complementary1Colour";
 
                 int i = 0;
                 int cutoff = 0;

@@ -42,20 +42,20 @@
                                    FontSize="20" 
                                    TextColor="{x:Static local:Framework.PrimaryColour}" 
                                    VerticalOptions="CenterAndExpand" 
-                                   HorizontalOptions="StartAndExpand" />
+                                   HorizontalOptions="StartAndExpand"/>
                            </ViewCell>
                         </DataTemplate>
                     </ListView.GroupHeaderTemplate>
                <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                            <Label 
-                                Text="{Binding Text}" 
-                                HeightRequest="40"
-                                   LineBreakMode="NoWrap" 
-                                   Style="{DynamicResource ListItemTextStyle}" 
-                                   FontSize="16" 
-                                 TextColor="{Binding Colour}"
+                        <Label 
+                            Text="{Binding Text}" 
+                            HeightRequest="40"
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" 
+                            TextColor="{Binding Colour}"
                             />
                     </ViewCell>
                 </DataTemplate>
