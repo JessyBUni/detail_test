@@ -1,5 +1,78 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="detail_test.Views.SettingsPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="detail_test.Views.SettingsPage"
+             xmlns:local ="clr-namespace:detail_test.ViewModels"
+             BackgroundImage="{x:Static local:Framework.BackgroundImage}"
+             Title="Settings">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+        <Label Text="Reset Log In Details"
+               Grid.Row="1"
+               Grid.Column="1"
+               TextColor="{x:Static local:Framework.PrimaryColour}"
+               VerticalOptions="Center"/>
+        <Button Grid.Row="1"
+                Grid.Column="3"
+                Text="Reset"
+                BackgroundColor="{x:Static local:Framework.PrimaryColour}"
+                VerticalOptions="Center"/>
+        
+        <Label Text="Username"
+               Grid.Row="2"
+               Grid.Column="1"
+               TextColor="{x:Static local:Framework.PrimaryColour}"
+               VerticalOptions="Center"/>
+        
+        <Label Text ="Password"
+               Grid.Row="3"
+               Grid.Column="1"
+               TextColor="{x:Static local:Framework.PrimaryColour}"
+               VerticalOptions="Center"/>
+        <Label Text="*********"
+               Grid.Row="3"
+               Grid.Column="3"
+               VerticalOptions="Center"/>
+        
+        <Button Text="Reset Password"
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                BackgroundColor="{x:Static local:Framework.PrimaryColour}"
+                VerticalOptions="Center"/>
+        
+         <Label Text ="Subscription Level"
+               Grid.Row="5"
+               Grid.Column="1"
+                TextColor="{x:Static local:Framework.PrimaryColour}"
+                VerticalOptions="Center"/>
+        <Label Text="Subscribed"
+               Grid.Row="5"
+               Grid.Column="3"
+               VerticalOptions="Center"/>
+        
+            <Button Text="Modify Subscription"
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                BackgroundColor="{x:Static local:Framework.PrimaryColour}"
+                    VerticalOptions="Center"/>
+        </Grid>
+            
 </ContentPage>

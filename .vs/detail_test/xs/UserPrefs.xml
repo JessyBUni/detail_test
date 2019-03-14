@@ -1,22 +1,8 @@
 ﻿<Properties StartupConfiguration="{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}|Default">
   <MonoDevelop.Ide.ItemProperties.detail__test.UITests FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="detail_test/ViewModels/Framework.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="detail_test Status">
     <Files>
-      <File FileName="detail_test/ViewModels/Framework.cs" Line="9" Column="11" />
-      <File FileName="detail_test/Views/ItemsPage.xaml.cs" Line="52" Column="24" />
-      <File FileName="detail_test/ViewModels/BaseViewModel.cs" Line="20" Column="1" />
-      <File FileName="detail_test/Views/MainPage.xaml.cs" Line="20" Column="1" />
-      <File FileName="detail_test/ViewModels/ItemsViewModel.cs" Line="59" Column="69" />
-      <File FileName="detail_test/Views/ItemsPage.xaml" Line="50" Column="31" />
-      <File FileName="detail_test/Models/Item.cs" Line="1" Column="1" />
-      <File FileName="detail_test/Views/ItemDetailPage.xaml" Line="12" Column="68" />
-      <File FileName="detail_test/Views/AboutPage.xaml" Line="6" Column="14" />
-      <File FileName="detail_test/App.xaml" Line="18" Column="15" />
-      <File FileName="detail_test/App.xaml.cs" Line="1" Column="1" />
-      <File FileName="detail_test/Views/SettingsPage.xaml" Line="6" Column="1" />
-      <File FileName="detail_test/Views/SettingsPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="detail_test/Views/MenuPage.xaml" Line="25" Column="15" />
-      <File FileName="detail_test/Views/MenuPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="detail_test Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.detail__test.iOS automaticSigning="False" />
@@ -30,6 +16,11 @@
       <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/Views/ItemsPage.xaml" relfile="detail_test/Views/ItemsPage.xaml" line="36" column="1" />
       <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/Views/ItemsPage.xaml" relfile="detail_test/Views/ItemsPage.xaml" line="32" column="1" />
       <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/Views/ItemsPage.xaml" relfile="detail_test/Views/ItemsPage.xaml" line="34" column="1" />
+      <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/ViewModels/LoginViewModel.cs" relfile="detail_test/ViewModels/LoginViewModel.cs" line="19" column="1" />
+      <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/ViewModels/LoginViewModel.cs" relfile="detail_test/ViewModels/LoginViewModel.cs" line="47" column="1" />
+      <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/ViewModels/LoginViewModel.cs" relfile="detail_test/ViewModels/LoginViewModel.cs" line="69" column="1" />
+      <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/Views/ItemsPage.xaml" relfile="detail_test/Views/ItemsPage.xaml" line="52" column="1" />
+      <Breakpoint file="/Users/jessicabuckley/Projects/detail_test/detail_test/Services/colourConverter.cs" relfile="detail_test/Services/colourConverter.cs" line="11" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

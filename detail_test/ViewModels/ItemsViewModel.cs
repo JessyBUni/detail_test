@@ -10,17 +10,18 @@ using detail_test.Views;
 
 namespace detail_test.ViewModels
 {
+
     public class Grouping : ObservableCollection<Item>
     {
         public string Header { get; set; }
-        public string Colour { get; set; }
+        //public Color Colour { get; set; }
     }
     public class ItemsViewModel : BaseViewModel
     {
         public ObservableCollection<Grouping> GroupedData { get; set; }
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
-
+        public Action DisplayInvalidAccessPrompt;
 
         public ItemsViewModel()
         {
@@ -52,12 +53,13 @@ namespace detail_test.ViewModels
 
                 Grouping groupa = new Grouping();
                 groupa.Header = "Accessible Content";
-                groupa.Colour = "local:Framework.SecondaryColour";
+                //groupa.Colour = "{x:Static local:Framework.SecondaryColour}";
+                //groupa.Colour = Framework.SecondaryColour;
 
                 Grouping group = new Grouping();
                 group.Header = "Locked Content";
-                group.Colour = "local:Framework.Complementary1Colour";
-
+                //group.Colour = "{x:Static local:Framework.Complementary1Colour}";
+                //group.Colour = Framework.Complementary1Colour;
                 int i = 0;
                 int cutoff = 0;
 
@@ -73,11 +75,13 @@ namespace detail_test.ViewModels
 
                     if (i <= cutoff)
                     {
+                        item.C = Framework.ContrastColour; 
                         //Itemsa.Add(item);
                         groupa.Add(item);
                     }
                     else
                     {
+                        item.C = Framework.SecondaryColour;
                         //Itemsl.Add(item);
                         group.Add(item);
                     }

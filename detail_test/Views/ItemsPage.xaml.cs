@@ -45,10 +45,19 @@ namespace detail_test.Views
                         LoginViewModel.ProgressPoint = newprog;
                         BindingContext = viewModel = new ItemsViewModel();
                     }
+                    else
+                    {
+                        viewModel.DisplayInvalidAccessPrompt += () => DisplayAlert("No Access",
+                         "Invalid Selection, please upgrade your user subscription", "OK");
+                        viewModel.DisplayInvalidAccessPrompt();
+                    }
                 }
             }
             else
             {
+                viewModel.DisplayInvalidAccessPrompt += () => DisplayAlert("No Access",
+                         "Invalid Selection, please view the previous chapters before trying to access this content", "OK");
+                viewModel.DisplayInvalidAccessPrompt();
                 return;
             }
 

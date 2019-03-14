@@ -20,5 +20,6 @@
   <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs" />
     <Compile Remove="ViewModels\ObservableGroupCollection.cs" />
+    <Compile Remove="Services\StringToColorConverter.cs" />
   </ItemGroup>
 </Project>

@@ -7,6 +7,10 @@
              xmlns:local="clr-namespace:detail_test.ViewModels"
              BackgroundImage="{x:Static local:Framework.BackgroundImage}"
              >
+    <ContentPage.Resources>
+   <!-- Add this line below -->
+            
+        </ContentPage.Resources>
     <ContentPage.Content>  
         <Grid x:Name="ControlGrid"
               RowSpacing="1"
@@ -55,7 +59,7 @@
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" 
-                            TextColor="{Binding Colour}"
+                            TextColor="{Binding C}"
                             />
                     </ViewCell>
                 </DataTemplate>

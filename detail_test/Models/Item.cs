@@ -9,5 +9,6 @@ namespace detail_test.Models
         public string Description { get; set; }
         public string Video { get; set; }
         public int ID { get; set; }
+        public Xamarin.Forms.Color C { get; set; }
     }
 }
